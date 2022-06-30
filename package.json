@@ -4,7 +4,8 @@
     "scripts": {
         "config": "ts-node ./src/assets/scripts/set-env.ts",
         "ng": "ng",
-        "start": "npm run config -- --environment=dev && ng serve",
+        "start": "node server.js",
+        "dev": "npm run config -- --environment=dev && ng serve",
         "build": "npm run config -- --environment=prod && ng build --prod",
         "watch": "ng build --watch --configuration development",
         "test": "ng test"
@@ -20,6 +21,8 @@
         "@angular/platform-browser-dynamic": "~13.3.0",
         "@angular/router": "~13.3.0",
         "dotenv": "^16.0.1",
+        "express": "^4.18.1",
+        "path": "^0.12.7",
         "rxjs": "~7.5.0",
         "ts-node": "^10.8.1",
         "tslib": "^2.3.0",
