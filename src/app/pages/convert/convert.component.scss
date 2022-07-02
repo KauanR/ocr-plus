@@ -1,0 +1,10 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    mat-accordion {
+        width: 65%;
+        margin: auto;
+    }
+}

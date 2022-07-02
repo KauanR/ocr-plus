@@ -1,1 +1,12 @@
 <app-convert-form (submitEmitter)="addItem($event)"></app-convert-form>
+
+<mat-accordion>
+    <mat-expansion-panel *ngFor="let item of items; let i = index">
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                Conversão {{i + 1}}
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <app-convert-item [item]="item"></app-convert-item>
+    </mat-expansion-panel>
+</mat-accordion>

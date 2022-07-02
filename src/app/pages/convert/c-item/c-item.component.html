@@ -1,0 +1,26 @@
+<img 
+    *ngIf="item.url" 
+    [src]="item.url"
+    onerror="this.onerror=null;this.src='../../../../assets/img/upload-error.png'"
+>
+
+<div class="content">
+    <div *ngIf="dataCtrl.loading" class="loading">
+        <mat-progress-spinner mode="indeterminate" color="warn" diameter="120" strokeWidth="10"></mat-progress-spinner>
+        <p>Carregando...</p>
+    </div>
+
+    <div *ngIf="dataCtrl.error" class="error">
+        <p class="mat-body-2">
+            Um erro ocorreu ao processar a conversão, tente novamente por favor.
+        </p>
+    </div>
+    
+    <div *ngIf="dataCtrl.data" class="data">
+        <pre>{{ dataCtrl.data.text }}</pre>
+        <ng-container *ngIf="dataCtrl.data.translatedText">
+            <mat-divider></mat-divider>
+            <p>{{ dataCtrl.data.translatedText }}</p>
+        </ng-container>
+    </div>
+</div>

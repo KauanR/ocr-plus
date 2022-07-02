@@ -13,11 +13,16 @@ import { MatIconModule } from '@angular/material/icon'
 import { MatSelectModule } from '@angular/material/select'
 import { ConvertFormComponent } from './c-form/c-form.component'
 import { MatButtonModule } from '@angular/material/button'
+import { ConvertItemComponent } from './c-item/c-item.component'
+import { MatExpansionModule } from '@angular/material/expansion'
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner'
+import { MatDividerModule } from '@angular/material/divider'
 
 @NgModule({
     declarations: [
         ConvertComponent,
-        ConvertFormComponent
+        ConvertFormComponent,
+        ConvertItemComponent
     ],
     imports: [
         CommonModule,
@@ -35,7 +40,10 @@ import { MatButtonModule } from '@angular/material/button'
         MatButtonToggleModule,
         MatIconModule,
         MatSelectModule,
-        MatButtonModule
+        MatButtonModule,
+        MatExpansionModule,
+        MatProgressSpinnerModule,
+        MatDividerModule
     ]
 })
 export class ConvertModule { }

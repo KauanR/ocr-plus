@@ -22,7 +22,7 @@ export class ConvertFormComponent {
         this.form = this.formBuilder.group({
             type: ['url', Validators.required],
             url: ['', [Validators.required, Validators.pattern('(https?://)?([\\da-z.-]+)\\.([a-z.]{2,6})[/\\w .-]*/?')]],
-            lang: ['port', Validators.required],
+            lang: ['por', Validators.required],
             translate: ['none', Validators.required]
         })
         this.formSub = {} as Subscription
