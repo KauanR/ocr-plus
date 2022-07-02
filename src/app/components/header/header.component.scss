@@ -8,7 +8,14 @@ img {
     margin: 0 4px 3px 0;
 }
 
+.route-button {
+    padding: 0.25rem 1rem;
+}
+
 .active {
     background: rgba(0, 0, 0, 0.2);
-    padding: 0.25rem 1rem;
+}
+
+p {
+    margin: 0;
 }
