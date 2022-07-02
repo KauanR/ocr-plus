@@ -1,24 +1,27 @@
 import { NgModule } from '@angular/core'
 import { BrowserModule } from '@angular/platform-browser'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
-// Components
+import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
-import { HeaderComponent } from './components/header/header.component'
-// Libs
-import { MatToolbarModule } from '@angular/material/toolbar'
-import { MatButtonModule } from '@angular/material/button'
+// Components
+import { HeaderModule } from './components/header/header.module'
+// Pages
+import { ConvertModule } from './pages/convert/convert.module'
+import { HomeModule } from './pages/home/home.module'
 
 @NgModule({
     declarations: [
-        AppComponent,
-        HeaderComponent
+        AppComponent
     ],
     imports: [
         BrowserModule,
         BrowserAnimationsModule,
+        AppRoutingModule,
 
-        MatToolbarModule,
-        MatButtonModule
+        HeaderModule,
+
+        ConvertModule,
+        HomeModule
     ],
     providers: [],
     bootstrap: [AppComponent]
