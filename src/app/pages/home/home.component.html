@@ -1,3 +1,26 @@
-<h1>OCR +</h1>
-<h3>OCR+ é um serviço online de OCR(Optical Character Recognition), utilizado para extrair o texto de imagems.</h3>
-<h3>Para utilizar, apenas faça upload da foto(ou cole sua URL), insira os parâmetros necessários, clique em enviar e obtenha seu texto.</h3>
+<mat-card class="mat-elevation-z5">
+    <mat-card-header>
+        <div mat-card-title>
+            OCR+
+        </div>
+        <div mat-card-subtitle>
+            OCR+ é um serviço online de OCR(Optical Character Recognition), utilizado para extrair o texto de imagems.
+        </div>
+    </mat-card-header>
+    <mat-divider inset></mat-divider>
+    <mat-card-content>
+        <h3>
+            Como ele funciona?
+        </h3>
+        <p>
+            A ferramenta permite extrair texto de imagens utilizando o <a [href]="tesseractUrl" target="_blank">Tesseract</a>, um software de reconhecimento ótico de caracteres. 
+            <br>
+            Além disso, caso desejado, utilizando o <a [href]="tesseractUrl" target="_blank">Puppeteer</a>, também é possível traduzir o texto extraído.
+        </p>
+        <div class="actions">
+            <button mat-raised-button color="primary" routerLink="/convert">
+                Começar!
+            </button>
+        </div>
+    </mat-card-content>
+</mat-card>
