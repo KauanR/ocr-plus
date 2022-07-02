@@ -1,0 +1,52 @@
+::ng-deep .ngx-mat-file-input {
+    div.mat-form-field-suffix {
+        top: -0.25em;
+    }
+}
+
+:host {
+    display: block;
+
+    mat-card {
+        margin: auto;
+        width: max-content;
+    
+        form {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: auto 1fr;
+            gap: 1rem;
+            min-width: 40vw;
+    
+            #type {
+                grid-auto-flow: column;
+                grid-column: span 1;
+                display: grid;
+                gap: 0.25rem;
+                align-items: center;
+                justify-items: center;
+                justify-content: center;
+    
+                span, mat-button-toggle-group {
+                    width: max-content;
+                    height: fit-content;
+                }
+            }
+    
+            #url, #file {
+                grid-column: span 3;
+                margin-top: 1rem;
+            }
+    
+            #lang, #translate {
+                grid-column: span 2;
+            }
+
+            div.actions {
+                grid-column: span 4;
+                display: flex;
+                justify-content: end;
+            }
+        }
+    }
+}
