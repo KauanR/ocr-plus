@@ -12,6 +12,8 @@ interface DataControl {
     }
 }
 
+const API_URL = environment.apiUrl || 'http://localhost:8080'
+
 @Component({
     selector: 'app-convert-item',
     templateUrl: 'c-item.component.html',
@@ -40,7 +42,7 @@ export class ConvertItemComponent implements OnInit {
     }
 
     private loadData(): void {
-        let url = `${environment.apiUrl}/convert?lang=${this.item.lang}`
+        let url = `${API_URL}/convert?lang=${this.item.lang}`
         if(this.item.translate !== 'none') url += `&translate=${this.item.translate}`
 
         let payload: any
@@ -57,9 +59,12 @@ export class ConvertItemComponent implements OnInit {
                     text: data.originalText,
                     translatedText: data.translate
                 }
+                this.dataCtrl.loading = false
             },
-            error: () => this.dataCtrl.error = true,
-            complete: () => this.dataCtrl.loading = false
+            error: () => {
+                this.dataCtrl.error = true
+                this.dataCtrl.loading = false
+            }
         })
     }
 
