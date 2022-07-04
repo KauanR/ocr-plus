@@ -21,7 +21,7 @@ export class ConvertFormComponent {
 
         this.form = this.formBuilder.group({
             type: ['url', Validators.required],
-            url: ['', [Validators.required, Validators.pattern('(https?://)?([\\da-z.-]+)\\.([a-z.]{2,6})[/\\w .-]*/?')]],
+            url: ['', [Validators.required, ]],
             lang: ['por', Validators.required],
             translate: ['none', Validators.required]
         })
@@ -33,7 +33,7 @@ export class ConvertFormComponent {
             if(val.type === 'url') {
                 this.form.addControl(
                     'url', 
-                    new FormControl('', [Validators.required, Validators.pattern('(https?://)?([\\da-z.-]+)\\.([a-z.]{2,6})[/\\w .-]*/?')]), 
+                    new FormControl('', [Validators.required, ]), 
                     { emitEvent: false }
                 )
                 this.form.removeControl('file', { emitEvent: false })
